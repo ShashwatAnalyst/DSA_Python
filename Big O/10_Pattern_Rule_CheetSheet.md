@@ -1,15 +1,24 @@
 # ✅ Big-O Core Rules (Revision Sheet)
 
 
-🔹 ✅ **Rule 1: If inner loop depends on outer loop → triangular → O(n²)**  
+🔹 ✅ **Rule 1: Simple loop → O(n)**
+Example:
+```python
+for i in arr:
+    print(i)
+
+```
+
+🔹 ✅ **Rule 2: Dual nested same-size loops → O(n²)**
 Example:
 ```python
 for i in range(n):
-    for j in range(i):
+    for j in range(n):
         print(i, j)
+
 ```
 
-🔹 ✅ **Rule 2: Independent loops → O(n + m)**
+🔹 ✅ **Rule 3: Independent loops → O(n + m)**
 Example:
 ```python
 for i in arr:
@@ -19,7 +28,7 @@ for j in nums:
     print(j)
 ```
 
-🔹 ✅ **Rule 3: Nested, independent loops → O(n * m)**
+🔹 ✅ **Rule 4: Nested, independent loops → O(n * m)**
 Example:
 ```python
 for i in arr:
@@ -27,7 +36,18 @@ for i in arr:
         print(i, j)
 ```
 
-🔹 ✅ **Rule 4: Constant inner loop → O(n)**
+
+🔹 ✅ **Rule 5: If inner loop depends on outer loop → triangular → O(n²)**  
+Example:
+```python
+for i in range(n):
+    for j in range(i):
+        print(i, j)
+```
+
+
+
+🔹 ✅ **Rule 6: Constant inner loop → O(n)**
 Example:
 ```python
 for i in range(n):
@@ -35,7 +55,7 @@ for i in range(n):
         print(i, j)
 ```
 
-🔹 ✅ **Rule 5: Doubling/Halving → O(log n)**
+🔹 ✅ **Rule 7: Doubling/Halving → O(log n)**
 Example:
 ```python
 x = 1
@@ -44,30 +64,13 @@ while x < n:
 
 ```
 
-🔹 ✅ **Rule 6: Outer loop n + inner loop log n → O(n log n)**
+🔹 ✅ **Rule 8: Outer loop n + inner loop log n → O(n log n)**
 Example:
 ```python
 for i in range(n):
     x = 1
     while x < n:
         x *= 2
-
-```
-
-🔹 ✅ **Rule 7: Simple loop → O(n)**
-Example:
-```python
-for i in arr:
-    print(i)
-
-```
-
-🔹 ✅ **Rule 8: Dual nested same-size loops → O(n²)**
-Example:
-```python
-for i in range(n):
-    for j in range(n):
-        print(i, j)
 
 ```
 
@@ -86,5 +89,27 @@ Example:
 ```python
 Separate loops → O(n + m)
 Nested loops  → O(n * m)
+
+```
+
+🔹 ✅ **Rule 11: Accessing an element by index in a list/array → O(1)**
+
+```python
+x = arr[5]
+```
+🔹 ✅ **Rule 12: Append/Pop at the end of a Python list (amortized O(1))**
+
+```python
+
+arr.append(10)  # O(1)
+arr.pop()       # O(1)
+
+```
+🔹 ✅ **Rule 13: Dictionary/Set lookup (hash-based access) → O(n)**
+
+```python
+
+exists = key in my_dict  
+value  = my_dict[key]    
 
 ```
