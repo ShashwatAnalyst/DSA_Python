@@ -1,6 +1,5 @@
 # ✅ Big-O Core Rules + Basic Examples (Revision Sheet)
 
----
 
 🔹 ✅ **Rule 1: If inner loop depends on outer loop → triangular → O(n²)**  
 Example:
@@ -72,17 +71,6 @@ for i in range(n):
 
 ```
 
-🔹 ✅ **Basic Example: Print items in n×n manner → O(n²)**
-Example:
-```python
-def print_items(n):
-    for i in range(n):
-        for j in range(n):
-            print(i, j)
-
-print_items(10)
-
-```
 🔹 ✅ **Rule 9: Drop constants & lower-order terms**
 Example:
 ```python
