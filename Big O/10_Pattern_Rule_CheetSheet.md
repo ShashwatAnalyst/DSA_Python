@@ -2,7 +2,7 @@
 
 
 🔹 ✅ **Rule 1: Simple loop → O(n)**
-Example:
+
 ```python
 for i in arr:
     print(i)
@@ -10,7 +10,7 @@ for i in arr:
 ```
 
 🔹 ✅ **Rule 2: Dual nested same-size loops → O(n²)**
-Example:
+
 ```python
 for i in range(n):
     for j in range(n):
@@ -19,7 +19,7 @@ for i in range(n):
 ```
 
 🔹 ✅ **Rule 3: Independent loops → O(n + m)**
-Example:
+
 ```python
 for i in arr:
     print(i)
@@ -29,7 +29,7 @@ for j in nums:
 ```
 
 🔹 ✅ **Rule 4: Nested, independent loops → O(n * m)**
-Example:
+
 ```python
 for i in arr:
     for j in nums:
@@ -38,7 +38,7 @@ for i in arr:
 
 
 🔹 ✅ **Rule 5: If inner loop depends on outer loop → triangular → O(n²)**  
-Example:
+
 ```python
 for i in range(n):
     for j in range(i):
@@ -48,7 +48,7 @@ for i in range(n):
 
 
 🔹 ✅ **Rule 6: Constant inner loop → O(n)**
-Example:
+
 ```python
 for i in range(n):
     for j in range(10):   # constant
@@ -56,7 +56,7 @@ for i in range(n):
 ```
 
 🔹 ✅ **Rule 7: Doubling/Halving → O(log n)**
-Example:
+
 ```python
 x = 1
 while x < n:
@@ -65,7 +65,7 @@ while x < n:
 ```
 
 🔹 ✅ **Rule 8: Outer loop n + inner loop log n → O(n log n)**
-Example:
+
 ```python
 for i in range(n):
     x = 1
@@ -75,7 +75,7 @@ for i in range(n):
 ```
 
 🔹 ✅ **Rule 9: Drop constants & lower-order terms**
-Example:
+
 ```python
 O(50n) → O(n)
 O(n + n²) → O(n²)
@@ -85,7 +85,7 @@ O(5n + 20) → O(n)
 ```
 
 🔹 ✅ **Rule 10: Add when loops are separate, multiply when nested**
-Example:
+
 ```python
 Separate loops → O(n + m)
 Nested loops  → O(n * m)
