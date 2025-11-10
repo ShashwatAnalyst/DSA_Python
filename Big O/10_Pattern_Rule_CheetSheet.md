@@ -1,4 +1,4 @@
-# ✅ Big-O Core Rules + Basic Examples (Revision Sheet)
+# ✅ Big-O Core Rules (Revision Sheet)
 
 
 🔹 ✅ **Rule 1: If inner loop depends on outer loop → triangular → O(n²)**  
